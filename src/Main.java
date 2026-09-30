@@ -10,6 +10,8 @@ public class Main {
             case 0:
                 System.out.println("Установите версию приложения для IOS по ссылке.");
                 break;
+            default:
+                System.out.println("Неизвестная операционная система.");
         }
 
         //Задача 2
@@ -23,11 +25,13 @@ public class Main {
             System.out.println("Установите версию приложения для IOS по ссылке.");
         } else if (operationSystem == 0 && clientDeviceYear < deviceYear) {
             System.out.println("Установите облегченную версию для IOS по сети.");
+        } else {
+            System.out.println("Неизвестная операционная система.");
         }
 
         //Задача 3
         int year = 2021;
-        if (year > 1584 && (year % 100) == 0 && (year % 4) == 0) {
+        if ((year > 1584 && year % 100 != 0 && year % 4 == 0) || (year > 1584 && year % 400 == 0)) {
             System.out.println(year + " год является високостным.");
         } else {
             System.out.println(year + " год не является високостным.");
@@ -64,6 +68,8 @@ public class Main {
             case 9, 10, 11:
                 System.out.println("Месяц относится к сезону Осень.");
                 break;
+            default:
+                System.out.println("Месяца под таким номером не существует.");
         }
 
     }
